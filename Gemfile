@@ -8,6 +8,7 @@ gem 'unicorn'
 gem 'grape'
 
 # Database
+gem 'foreigner'
 gem 'mysql2'
 
 # Utility
