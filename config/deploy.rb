@@ -5,6 +5,9 @@ set :repository,  'git@github.com:mooremo/rushour_server.git'
 set :scm, :git
 set :user, 'ubuntu'
 server 'ec2-23-23-12-82.compute-1.amazonaws.com', :app, :web, :db, :primary => true
+default_run_options[:pty] = true
+ssh_options[:forward_agent] = true
+ssh_options[:auth_methods] = "publickey"
 ssh_options[:keys] = ['rushour.pem']
 set :use_sudo, false
 
