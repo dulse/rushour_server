@@ -7,9 +7,9 @@ set :user, 'ubuntu'
 server 'ec2-23-23-12-82.compute-1.amazonaws.com', :app, :web, :db, :primary => true
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
-ssh_options[:auth_methods] = "publickey"
-ssh_options[:keys] = ['rushour.pem']
-set :use_sudo, false
+ssh_options[:auth_methods] = ['publickey']
+ssh_options[:keys] = ['/Users/mmoore/Documents/Projects/rushour_server/config/rushour.pem']
+set :use_sudo, true
 
 set :deploy_via, :remote_cache
 set :deploy_to, "/var/www/#{application}"
