@@ -1,0 +1,3 @@
+module Rushour
+  # STUFF
+end
