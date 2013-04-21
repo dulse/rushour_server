@@ -20,5 +20,4 @@ task :environment do
     :database => db.path[1..-1],
     :encoding => 'utf8'
   )
-  ActiveRecord::Base.logger = Logger.new(File.open('database.log', 'a'))
 end
