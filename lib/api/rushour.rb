@@ -25,9 +25,9 @@ module RushourAPI
       end
     end
 
-    resource 'user/:id' do
-      get '/' do
-        Rushour::Models::Place.where(user_id: id)
+    resource 'user' do
+      get '/:id' do
+        Rushour::Models::Place.where(user_id: params[:id])
       end
     end
 
