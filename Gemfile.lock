@@ -25,7 +25,6 @@ GEM
     capistrano-ext (1.2.1)
       capistrano (>= 1.0.0)
     descendants_tracker (0.0.1)
-    diff-lcs (1.2.3)
     grape (0.4.1)
       activesupport
       builder
@@ -57,18 +56,8 @@ GEM
       rack (>= 0.4)
     rack-mount (0.8.3)
       rack (>= 1.0.0)
-    rack-test (0.6.2)
-      rack (>= 1.0)
     raindrops (0.10.0)
     rake (10.0.4)
-    rspec (2.13.0)
-      rspec-core (~> 2.13.0)
-      rspec-expectations (~> 2.13.0)
-      rspec-mocks (~> 2.13.0)
-    rspec-core (2.13.1)
-    rspec-expectations (2.13.0)
-      diff-lcs (>= 1.1.3, < 2.0)
-    rspec-mocks (2.13.1)
     tzinfo (0.3.37)
     unicorn (4.6.2)
       kgio (~> 2.6)
@@ -87,8 +76,7 @@ DEPENDENCIES
   capistrano
   capistrano-ext
   grape
+  pg
   postgres
-  rack-test
   rake
-  rspec
   unicorn

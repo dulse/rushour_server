@@ -8,7 +8,9 @@ gem 'unicorn'
 gem 'grape'
 
 # Database
-gem 'postgres'
+group :production do
+  gem "pg"
+end
 
 # Utility
 gem 'activerecord'
@@ -16,11 +18,7 @@ gem 'awesome_print'
 
 group :development do
   # Deploy
+  gem 'postgres'
   gem 'capistrano'
   gem 'capistrano-ext'
-end
-
-group :test do
-  gem 'rack-test'
-  gem 'rspec'
 end
