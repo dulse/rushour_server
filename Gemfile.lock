@@ -41,6 +41,7 @@ GEM
       multi_json (~> 1.0)
       multi_xml (>= 0.5.2)
     i18n (0.6.1)
+    json (1.7.7)
     kgio (2.8.0)
     multi_json (1.7.2)
     multi_xml (0.5.3)
@@ -67,6 +68,8 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
+    urbanairship (2.3.1)
+      json
     virtus (0.5.4)
       backports (~> 2.6.1)
       descendants_tracker (~> 0.0.1)
@@ -87,4 +90,5 @@ DEPENDENCIES
   postgres
   rake
   unicorn
+  urbanairship
   yahoo-weather

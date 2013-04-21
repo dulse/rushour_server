@@ -27,6 +27,10 @@ module RushourAPI
       get '/:id/places' do
         Rushour::Models::Place.where(user_id: params[:id])
       end
+
+      post '/create' do
+        Rushour::Models::User.create(params)
+      end
     end
 
   end
