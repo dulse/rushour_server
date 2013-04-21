@@ -6,29 +6,29 @@ class InitialMigrations < ActiveRecord::Migration
     end
 
     create_table :places do |p|
+      p.integer     'user_id', null: false
       p.string      'name', null: false
       p.string      'address', null: false
       p.timestamps
     end
 
     create_table :commute_templates do |ct|
+      ct.integer     'user_id', null: false
+      ct.integer     'start_place_id', null: false
+      ct.integer     'end_place_id', null: false
       ct.time        'arrive_by', null: false
       ct.string      'commute_mode', null: :false, default: :shortest_transit_time
       ct.string      'transportation_mode', null: :false, default: :car
       ct.string      'recurrence', null: :false, default: ''
+      ct.timestamps
     end
 
-    create_table :commute do |c|
+    create_table :commutes do |c|
+      c.integer     'commute_template_id', null: false
+      c.integer     'user_id', null: false
       c.datetime    'occurs_at', null: false
+      c.timestamps
     end
-
-    add_foreign_key(:places, :users, dependent: :delete)
-    add_foreign_key(:commute_templates, :users, dependent: :delete)
-    add_foreign_key(:commutes, :users, dependent: :delete)
-
-    add_foreign_key(:commute_templates, :places, name: 'start', dependent: :delete)
-    add_foreign_key(:commute_templates, :places, name: 'end', dependent: :delete)
-    add_foreign_key(:commutes, :commute_templates, dependent: :delete)
   end
 
   def self.down

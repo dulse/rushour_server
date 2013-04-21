@@ -1,3 +1,3 @@
 module Rushour
-  # STUFF
+  require 'models'
 end
