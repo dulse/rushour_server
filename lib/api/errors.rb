@@ -1,4 +1,4 @@
-module API
+module RushourAPI
 
   class NotFound < StandardError
   end

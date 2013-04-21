@@ -1,7 +1,7 @@
 require 'grape'
 
-module API
-  class Rushour < Grape::API
+module RushourAPI
+  class API < Grape::API
 
     prefix 'api'
     version 'v1'
@@ -11,11 +11,11 @@ module API
       Rack::Response.new({error: e.message }.to_json, 500, { 'Content-type' => 'application/json' }).finish
     end
 
-    rescue_from API::NotFound do |e|
+    rescue_from RushourAPI::NotFound do |e|
       Rack::Response.new({error: e.message }.to_json, 404, { 'Content-type' => 'application/json' }).finish
     end
 
-    rescue_from API::InvalidParameters, Grape::Exceptions::Validation do |e|
+    rescue_from RushourAPI::InvalidParameters, Grape::Exceptions::Validation do |e|
       Rack::Response.new({error: e.message }.to_json, 400, { 'Content-type' => 'application/json' }).finish
     end
 

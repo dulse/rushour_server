@@ -1,6 +1,6 @@
 require 'rushour'
 
-module API
+module RushourAPI
   require 'api/errors'
   require 'api/rushour'
 end
