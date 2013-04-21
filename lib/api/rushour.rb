@@ -29,7 +29,11 @@ module RushourAPI
       end
 
       post '/create' do
-        Rushour::Models::User.create(params)
+        if u = Rushour::Models::User.where(device_token: params[:device_token]).first
+          u.update_attributes(params)
+        else
+          Rushour::Models::User.create(params)
+        end
       end
     end
 
