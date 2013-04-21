@@ -16,7 +16,7 @@ end
 gem 'activerecord'
 gem 'awesome_print'
 gem 'httparty'
-gem 'yahoo-weather'
+#gem 'yahoo-weather'
 gem 'urbanairship'
 
 group :development do
