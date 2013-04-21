@@ -1,4 +1,4 @@
-class AddEmailToUser < ActiveRecord::Migration
+class AddDeviceTokenToUser < ActiveRecord::Migration
   def self.up
     add_column :users, :device_token, :string
   end
