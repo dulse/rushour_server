@@ -28,7 +28,7 @@ module RushourAPI
         Rushour::Models::Place.where(user_id: params[:id])
       end
 
-      post '/create' do
+      post '/' do
         if u = Rushour::Models::User.where(device_token: params[:device_token]).first
           u.update_attributes(params)
         else
