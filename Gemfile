@@ -8,7 +8,7 @@ gem 'unicorn'
 gem 'grape'
 
 # Database
-gem 'pg'
+gem 'postgres'
 
 # Utility
 gem 'activerecord'
