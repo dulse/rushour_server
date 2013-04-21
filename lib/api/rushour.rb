@@ -19,12 +19,6 @@ module RushourAPI
       Rack::Response.new({error: e.message }.to_json, 400, { 'Content-type' => 'application/json' }).finish
     end
 
-    resource 'email' do
-      get "/" do
-        User.create(email: params[:email])
-      end
-    end
-
     resource 'user' do
       get '/:id' do
         Rushour::Models::User.find(params[:id])

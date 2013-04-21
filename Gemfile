@@ -15,6 +15,7 @@ end
 # Utility
 gem 'activerecord'
 gem 'awesome_print'
+gem 'httparty'
 
 group :development do
   # Deploy
