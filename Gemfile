@@ -16,6 +16,7 @@ end
 gem 'activerecord'
 gem 'awesome_print'
 gem 'httparty'
+gem 'yahoo-weather'
 
 group :development do
   # Deploy

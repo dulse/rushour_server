@@ -51,6 +51,7 @@ GEM
     net-ssh (2.6.7)
     net-ssh-gateway (1.2.0)
       net-ssh (>= 2.6.5)
+    nokogiri (1.5.9)
     pg (0.15.1)
     postgres (0.8.1)
       pg (~> 0)
@@ -69,6 +70,8 @@ GEM
     virtus (0.5.4)
       backports (~> 2.6.1)
       descendants_tracker (~> 0.0.1)
+    yahoo-weather (1.2.0)
+      nokogiri (>= 1.4.1)
 
 PLATFORMS
   ruby
@@ -84,3 +87,4 @@ DEPENDENCIES
   postgres
   rake
   unicorn
+  yahoo-weather
