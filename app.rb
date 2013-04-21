@@ -10,14 +10,14 @@ require 'grape'
 require 'api'
 require 'rushour'
 
-db = URI.parse(ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
+db = URI.parse('postgres://ec2-54-225-105-169.compute-1.amazonaws.com/dc66k8imiq7b7q')
 
 ActiveRecord::Base.establish_connection(
   :adapter  => db.scheme == 'postgres' ? 'postgresql' : db.scheme,
-  :host     => db.host,
-  :port     => db.port,
-  :username => db.user,
-  :password => db.password,
+  :host     => 'ec2-54-225-105-169.compute-1.amazonaws.com',
+  :port     => '5432',
+  :username => 'oiebuasqacfzhb',
+  :password => 'Y2wrN2a_LBkkp6wO8u9VtVVULk',
   :database => db.path[1..-1],
   :encoding => 'utf8'
 )

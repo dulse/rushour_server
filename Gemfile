@@ -9,7 +9,7 @@ gem 'grape'
 
 # Database
 group :production do
-  gem "pg"
+  gem 'pg'
 end
 
 # Utility
