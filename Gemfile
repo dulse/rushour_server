@@ -1,27 +1,26 @@
 source 'https://rubygems.org'
-ruby '1.9.3'
 
-gem 'rake'
+gem 'rails', '3.2.13'
 
-# Server/API
-gem 'unicorn'
-gem 'grape'
+# Bundle edge Rails instead:
+# gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-# Database
-group :production do
-  gem 'pg'
-end
+gem 'rails-api'
 
-# Utility
-gem 'activerecord'
-gem 'awesome_print'
-gem 'httparty'
-#gem 'yahoo-weather'
-gem 'urbanairship'
+gem 'sqlite3'
 
-group :development do
-  # Deploy
-  gem 'postgres'
-  gem 'capistrano'
-  gem 'capistrano-ext'
-end
+
+# To use ActiveModel has_secure_password
+# gem 'bcrypt-ruby', '~> 3.0.0'
+
+# To use Jbuilder templates for JSON
+# gem 'jbuilder'
+
+# Use unicorn as the app server
+# gem 'unicorn'
+
+# Deploy with Capistrano
+# gem 'capistrano', :group => :development
+
+# To use debugger
+# gem 'ruby-debug19', :require => 'ruby-debug'

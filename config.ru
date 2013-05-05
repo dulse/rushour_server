@@ -1,5 +1,4 @@
-$: << File.expand_path(File.join(__FILE__, ".."))
+# This file is used by Rack-based servers to start the application.
 
-require 'app'
-
-run RushourAPI::API
+require ::File.expand_path('../config/environment',  __FILE__)
+run Rushour::Application
