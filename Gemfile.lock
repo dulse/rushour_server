@@ -31,8 +31,15 @@ GEM
     arel (3.0.2)
     awesome_print (1.1.0)
     builder (3.0.4)
+    cta-api (1.0.1)
+      hashie (>= 2.0.0)
+      httparty (>= 0.10.2)
     erubis (2.7.0)
+    hashie (2.0.5)
     hike (1.2.2)
+    httparty (0.11.0)
+      multi_json (~> 1.0)
+      multi_xml (>= 0.5.2)
     i18n (0.6.1)
     journey (1.0.4)
     json (1.7.7)
@@ -42,6 +49,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.23)
     multi_json (1.7.2)
+    multi_xml (0.5.3)
     polyglot (0.3.3)
     rack (1.4.5)
     rack-cache (1.2)
@@ -90,6 +98,7 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print
+  cta-api
   rails (= 3.2.13)
   rails-api
   sqlite3
